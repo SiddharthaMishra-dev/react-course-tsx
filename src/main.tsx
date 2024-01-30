@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import Courses from "./Pages/Courses.tsx";
 import CourseId from "./Pages/CourseId.tsx";
 import Student from "./Pages/Student.tsx";
-import Navbar from "./components/Navbar.tsx";
 
 const router = createBrowserRouter([
   {
