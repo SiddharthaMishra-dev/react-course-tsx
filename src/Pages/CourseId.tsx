@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { BounceLoader } from "react-spinners";
 import DATA from "../data";
 import { useEffect, useState } from "react";
 
@@ -22,7 +23,7 @@ const CourseId = () => {
         return temp.length > 0 ? temp[0] : null;
       });
       setLoading(false);
-    });
+    }, 1000);
   };
 
   useEffect(() => {
@@ -32,7 +33,9 @@ const CourseId = () => {
   return (
     <div className="h-full p-10 md:p-20">
       {loading === true ? (
-        <div>Loading</div>
+        <div className="flex h-full w-full justify-center items-center">
+          <BounceLoader color="orange" />
+        </div>
       ) : (
         <div className="h-full w-full">
           <h3 className="text-4xl sm:text-6xl font-bold text-gray-900 text-center">
